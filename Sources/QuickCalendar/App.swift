@@ -52,7 +52,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(screensChanged), name: NSApplication.didChangeScreenParametersNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: NSApplication.didBecomeActiveNotification, object: nil)
         Task { await model.loginItem.configureOnFirstLaunch() }
-        if CommandLine.arguments.contains("--preview") || Bundle.main.object(forInfoDictionaryKey: "QuickCalenderPreview") as? Bool == true { showPreview() }
+        if CommandLine.arguments.contains("--preview") || Bundle.main.object(forInfoDictionaryKey: "QuickCalendarPreview") as? Bool == true { showPreview() }
         if CommandLine.arguments.contains("--settings") { openSettings() }
     }
 
@@ -178,7 +178,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
 }
 
 @main
-enum QuickCalenderApplication {
+enum QuickCalendarApplication {
     @MainActor static func main() {
         let application = NSApplication.shared
         let delegate = AppDelegate()

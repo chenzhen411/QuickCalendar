@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
-    <key>CFBundleName</key><string>QuickCalender</string>
-    <key>CFBundleDisplayName</key><string>快捷日历</string>
+    <key>CFBundleName</key><string>QuickCalendar</string>
+    <key>CFBundleDisplayName</key><string>QuickCalendar</string>
+    <!-- Keep the original identifier to preserve user settings and macOS login items. -->
     <key>CFBundleIdentifier</key><string>com.chenzhen411.QuickCalender</string>
-    <key>CFBundleVersion</key><string>5</string>
-    <key>CFBundleShortVersionString</key><string>1.0.4</string>
-    <key>CFBundleExecutable</key><string>QuickCalender</string>
+    <key>CFBundleVersion</key><string>6</string>
+    <key>CFBundleShortVersionString</key><string>1.0.5</string>
+    <key>CFBundleExecutable</key><string>QuickCalendar</string>
     <key>CFBundlePackageType</key><string>APPL</string>
     <key>CFBundleIconFile</key><string>AppIcon</string>
     <key>LSMinimumSystemVersion</key><string>13.0</string>
     <key>LSUIElement</key><true/>
     <key>NSHighResolutionCapable</key><true/>
     <key>NSPrincipalClass</key><string>NSApplication</string>
-    <key>NSHumanReadableCopyright</key><string>Copyright © 2026 QuickCalender</string>
+    <key>NSHumanReadableCopyright</key><string>Copyright © 2026 QuickCalendar</string>
 </dict></plist>

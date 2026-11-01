@@ -18,5 +18,5 @@ jobs:
         run: bash scripts/build.sh
       - uses: actions/upload-artifact@v4
         with:
-          name: QuickCalender-macOS
-          path: dist/QuickCalender-macOS.zip
+          name: QuickCalendar-macOS
+          path: dist/QuickCalendar-macOS.zip

@@ -2,13 +2,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "QuickCalender",
+    name: "QuickCalendar",
     platforms: [.macOS(.v13)],
-    products: [.executable(name: "QuickCalender", targets: ["QuickCalender"])],
+    products: [.executable(name: "QuickCalendar", targets: ["QuickCalendar"])],
     targets: [
         .target(name: "CalendarCore"),
         .target(name: "AppServices"),
-        .executableTarget(name: "QuickCalender", dependencies: ["CalendarCore", "AppServices"]),
+        .executableTarget(name: "QuickCalendar", dependencies: ["CalendarCore", "AppServices"]),
         .testTarget(name: "CalendarCoreTests", dependencies: ["CalendarCore"]),
         .testTarget(name: "AppServicesTests", dependencies: ["AppServices"])
     ],

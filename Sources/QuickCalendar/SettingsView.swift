@@ -13,10 +13,10 @@ struct SettingsView: View {
                     .background(LinearGradient(colors: [.calAccent, Color(red: 0.43, green: 0.47, blue: 0.95)], startPoint: .topLeading, endPoint: .bottomTrailing), in: RoundedRectangle(cornerRadius: 14))
                 VStack(alignment: .leading, spacing: 4) {
                     Text("让时间，一目了然").font(.system(size: 19, weight: .semibold))
-                    Text("快捷日历  /  QuickCalender").font(.system(size: 11)).foregroundStyle(.secondary)
+                    Text("快捷日历  /  QuickCalendar").font(.system(size: 11)).foregroundStyle(.secondary)
                 }
                 Spacer()
-                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.4")
+                Text(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "1.0.5")
                     .font(.system(size: 10, design: .monospaced)).foregroundStyle(.tertiary)
             }.padding(24)
             Picker("设置分类", selection: $tab) {
@@ -38,7 +38,7 @@ struct SettingsView: View {
                 Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
                 Text("所有设置即时生效，自动保存")
                 Spacer()
-                Link("GitHub ↗", destination: URL(string: "https://github.com/chenzhen411/QuickCalender")!)
+                Link("GitHub ↗", destination: URL(string: "https://github.com/chenzhen411/QuickCalendar")!)
             }.font(.system(size: 10)).foregroundStyle(.secondary).padding(.horizontal, 24).padding(.vertical, 14)
         }
         .frame(width: 560, height: 590)

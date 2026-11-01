@@ -5,7 +5,7 @@ import Testing
 @MainActor
 struct LoginItemControllerTests {
     private func isolatedDefaults() -> (UserDefaults, String) {
-        let name = "QuickCalender.LoginItemTests.\(UUID().uuidString)"
+        let name = "QuickCalendar.LoginItemTests.\(UUID().uuidString)"
         return (UserDefaults(suiteName: name)!, name)
     }
 

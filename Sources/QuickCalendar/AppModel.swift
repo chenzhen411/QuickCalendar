@@ -6,6 +6,7 @@ import AppServices
 
 @MainActor
 final class AppModel: ObservableObject {
+    // Keep the original key so the spelling correction preserves saved settings.
     static let storageKey = "QuickCalender.preferences.v1"
     @Published var preferences: Preferences {
         didSet {

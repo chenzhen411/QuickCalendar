@@ -1,14 +1,14 @@
-# 快捷日历 · QuickCalender
+# 快捷日历 · QuickCalendar
 
 一个轻巧的原生 macOS 状态栏日历。点开日期，就能看见月历、农历、中国节日和城市天气。
 
 ## 下载安装
 
-**[下载 DMG · v1.0.4](https://github.com/chenzhen411/QuickCalender/releases/download/v1.0.4/QuickCalender-1.0.4-macOS-arm64.dmg)** · [查看最新版本](https://github.com/chenzhen411/QuickCalender/releases/latest)
+**[下载 DMG · v1.0.5](https://github.com/chenzhen411/QuickCalendar/releases/download/v1.0.5/QuickCalendar-1.0.5-macOS-arm64.dmg)** · [查看最新版本](https://github.com/chenzhen411/QuickCalendar/releases/latest)
 
 适用于 **Apple Silicon（M 系列芯片）Mac，macOS 13 或更新版本**。
 
-1. 下载并打开 DMG，将 `QuickCalender.app` 拖入 `Applications`（应用程序）。
+1. 下载并打开 DMG，将 `QuickCalendar.app` 拖入 `Applications`（应用程序）。
 2. 从“应用程序”启动快捷日历，在状态栏点击日期即可展开月历。
 3. 首次启动默认开启开机启动，可在“设置 → 通用 → 启动”关闭。
 
@@ -38,14 +38,14 @@
 运行要求：macOS 13 Ventura 或更新版本。构建需要 Swift 6.0+（Xcode 16+ 或相应 Command Line Tools）。首次开发前可运行 `xcode-select --install` 安装工具。
 
 ```bash
-git clone https://github.com/chenzhen411/QuickCalender.git
-cd QuickCalender
+git clone https://github.com/chenzhen411/QuickCalendar.git
+cd QuickCalendar
 bash scripts/run.sh
 ```
 
-安装包位于 `dist/QuickCalender-macOS.zip`。解压后将 `QuickCalender.app` 拖到“应用程序”文件夹，再双击运行。状态栏会出现日期、星期和时间；应用默认不在 Dock 显示。
+安装包位于 `dist/QuickCalendar-macOS.zip`。解压后将 `QuickCalendar.app` 拖到“应用程序”文件夹，再双击运行。状态栏会出现日期、星期和时间；应用默认不在 Dock 显示。
 
-构建脚本在临时目录完成签名及验证，再生成不含扩展元数据的 ZIP 和 `dist/QuickCalender.app` 副本。这样即使项目位于 iCloud 同步目录，也能获得干净的分发包。`run.sh` 启动经过验证的临时目录中的应用。
+构建脚本在临时目录完成签名及验证，再生成不含扩展元数据的 ZIP 和 `dist/QuickCalendar.app` 副本。这样即使项目位于 iCloud 同步目录，也能获得干净的分发包。`run.sh` 启动经过验证的临时目录中的应用。
 
 ```bash
 # 仅打包
@@ -55,13 +55,13 @@ bash scripts/build.sh
 bash scripts/test.sh
 
 # 开发运行
-bash scripts/swift-tool.sh run QuickCalender
+bash scripts/swift-tool.sh run QuickCalendar
 
 # 独立日历预览窗口（便于开发和截图）
-dist/QuickCalender.app/Contents/MacOS/QuickCalender --preview
+dist/QuickCalendar.app/Contents/MacOS/QuickCalendar --preview
 
 # 启动时直接显示设置
-open dist/QuickCalender.app --args --settings
+open dist/QuickCalendar.app --args --settings
 
 ```
 
@@ -93,14 +93,14 @@ open dist/QuickCalender.app --args --settings
 
 打包脚本生成当前机器架构的应用，并使用本地 ad-hoc 签名。该签名适合本机运行和开发验证；向其他 Mac 分发前，建议配置 Apple Developer ID 签名及公证。
 
-GitHub Actions 在 push / PR 时运行测试、打包，并上传 `QuickCalender-macOS` ZIP 构建产物。Actions 中的构建架构由 runner 决定。
+GitHub Actions 在 push / PR 时运行测试、打包，并上传 `QuickCalendar-macOS` ZIP 构建产物。Actions 中的构建架构由 runner 决定。
 
 ## 项目结构
 
 ```text
 Sources/CalendarCore/       日历、农历节日、状态栏格式和天气 API
 Sources/AppServices/        系统登录项注册、首次启动策略和状态同步
-Sources/QuickCalender/      AppKit 生命周期、SwiftUI 月历及设置
+Sources/QuickCalendar/      AppKit 生命周期、SwiftUI 月历及设置
 Tests/CalendarCoreTests/    日历边界、闰月、节日、时区、天气解析测试
 Tests/AppServicesTests/     登录项首次开启、关闭持久化和错误处理测试
 Resources/Info.plist        macOS 应用配置

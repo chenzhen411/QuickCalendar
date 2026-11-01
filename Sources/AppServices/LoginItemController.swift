@@ -33,6 +33,7 @@ private final class MainAppLoginItemService: LoginItemService {
 
 @MainActor
 public final class LoginItemController: ObservableObject {
+    // Keep the original key: renaming the app must not re-enable a disabled login item.
     static let configuredKey = "QuickCalender.loginItemConfigured.v1"
     @Published public private(set) var status: LoginItemStatus = .notRegistered
     @Published public private(set) var isUpdating = false
